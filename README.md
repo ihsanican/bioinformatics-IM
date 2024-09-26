@@ -9,6 +9,10 @@ Write a README file containing all commands you run to complete these tasks, and
 1042519
 
 ## Find the number of genomes that contain at least two "c" in the species name
+    $ cut -f 3 ncbi_dataset.tsv | uniq | grep -ic "c.*c"
+7
+
+## Find the number of genomes that contain at least two "c" in the species name but do not contain the word "coccus"
     $ cut -f 3 ncbi_dataset.tsv | uniq | grep -i "c.*c" | grep -c -v "coccus"
 5
 
